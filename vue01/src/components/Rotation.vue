@@ -105,7 +105,7 @@
     border:0px solid #C0C0C0;
     width: 10%;
     height: inherit;
-    margin-left: 8%;
+    margin: 0 auto;
   }
   .state{
     background: lightgray;

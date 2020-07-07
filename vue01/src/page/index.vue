@@ -17,13 +17,16 @@
         <Rotation></Rotation>
     </div>
     <div class="index_activity">
-
+      <activity></activity>
     </div>
     <div class="index_recommend">
-
+      <recommend></recommend>
+    </div>
+    <div class="index_activity_box">
+      <index_activity_box></index_activity_box>
     </div>
     <div class="high_price">
-
+      <Rotation_hprice></Rotation_hprice>
     </div>
     <div class="content">
 
@@ -35,6 +38,10 @@
 <script>
   import Footer from '../components/footer'
   import Rotation from '../components/Rotation'
+  import Rotation_hprice from '../components/Rotation_hprice'
+  import activity from '../components/activity'
+  import recommend from '../components/recommend'
+  import index_activity_box from '../components/index_activity_box'
   export default {
     data(){
       return{
@@ -63,6 +70,10 @@
     components:{
       Footer,
       Rotation,
+      Rotation_hprice,
+      activity,
+      recommend,
+      index_activity_box,
     }
   }
 </script>
@@ -79,6 +90,8 @@
     width: 100%;
     height: 200px;
     top: 0;
+    background-color: deepskyblue;
+
   }
   .index_title{
     width: 100%;
@@ -99,39 +112,46 @@
     background-image: url("../assets/search.png");
     background-repeat: no-repeat;
     background-size: 20px 20px;
-    background-position: 6px 6px;
+    background-position: 10px 14px;
     padding-left:30px;
     /*边框设定*/
-    border-radius:18px;
-    border:0px solid #C0C0C0;
+    border-radius:25px;
+    border:0px;
   }
   .search{
     width: 100%;
-    height: 50%;
+    height: 60%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
+    top: 6%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #FAFAFA;
+
+
   }
   .index_ad{
     width: 100%;
     height: 300px;
   }
   .index_activity{
-    background-color: yellow;
-    width: 100%;
-    height: 450px;
-  }
-  .index_recommend{
-    background-color: green;
     width: 100%;
     height: 500px;
   }
-  .high_price{
-    background-color: sienna;
+  .index_recommend{
     width: 100%;
-    height: 300px;
+    height: 340px;
+  }
+  .index_activity_box{
+    width: 100%;
+    height: 550px;
+    border-radius:15px
+  }
+  .high_price{
+    width: 100%;
+    height: 400px;
   }
   .content{
     background-color:black;

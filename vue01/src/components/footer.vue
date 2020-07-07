@@ -3,7 +3,7 @@
   <div id="footer" >
     <div class="tab" v-for="(x,i) in tabs" :key="i" @click="addClassName(i)">
       <router-link :to="x.url">
-        <div>
+        <div style="width: 35px;height: 35px;margin: 0 auto;padding-bottom: 10px">
           <img v-if="flag != i" :src="x.img">
           <img v-if="flag == i" :src="x.active">
         </div>
@@ -70,13 +70,15 @@
   }
   span{
     color: black;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 12px;
   }
   img{
-    width: 22px;
-    height: 22px;
+    width: inherit;
+    height: inherit;
     margin-top: 5px;
+
   }
   .tab{
     float: left;
