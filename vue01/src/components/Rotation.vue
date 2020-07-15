@@ -80,9 +80,6 @@
 </script>
 
 <style scoped>
-  #Rotaion{
-
-  }
   img{
     width: 900px;
     height: 250px;

@@ -29,7 +29,7 @@
       <Rotation_hprice></Rotation_hprice>
     </div>
     <div class="content">
-
+      <Content ref="con"></Content>
     </div>
     <Footer></Footer>
   </div>
@@ -41,40 +41,45 @@
   import Rotation_hprice from '../components/Rotation_hprice'
   import activity from '../components/activity'
   import recommend from '../components/recommend'
+  import Content from '../components/content'
   import index_activity_box from '../components/index_activity_box'
   export default {
-    data(){
-      return{
-        indexNumTop:'',
-        scrollTop:'',
+    data() {
+      return {
+        indexNumTop: '',
+        scrollTop: '',
         str: "华莱士",
-        search:'',
-        address:'城关街道崇宁社区',
+        search: '',
+        address: '城关街道崇宁社区',
+        Stores:'',
       }
     },
     name: "index",
-    mounted(){
+    mounted() {
       window.addEventListener('scroll', this.getScroll);
+      console.log(this.$refs.con)
     },
-    destroyed(){
+    destroyed() {
       window.removeEventListener('scroll', this.getScroll);
     },
-    methods:{
+    methods: {
       //监听滚动
-      getScroll(){
+      getScroll() {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        console.log(scrollTop)
-      }
+        var viewportSize = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        console.log(scrollTop, viewportSize)
+      },
 
     },
-    components:{
-      Footer,
-      Rotation,
-      Rotation_hprice,
-      activity,
-      recommend,
-      index_activity_box,
-    }
+      components: {
+        Footer,
+        Rotation,
+        Rotation_hprice,
+        activity,
+        recommend,
+        index_activity_box,
+        Content,
+      }
   }
 </script>
 
@@ -107,7 +112,7 @@
   .search > input  {
     width: 90%;
     height: 40%;
-    background-color: #E6E6E6;
+    background-color: lightgrey;
   /*搜索图标设定*/
     background-image: url("../assets/search.png");
     background-repeat: no-repeat;
@@ -135,6 +140,7 @@
   .index_ad{
     width: 100%;
     height: 300px;
+    background-color: #FAFAFA;
   }
   .index_activity{
     width: 100%;
@@ -154,7 +160,7 @@
     height: 400px;
   }
   .content{
-    background-color:black;
+    background-color:lightblue;
     width: 100%;
     height: 100%;
     position: relative;

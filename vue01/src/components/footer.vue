@@ -3,7 +3,7 @@
   <div id="footer" >
     <div class="tab" v-for="(x,i) in tabs" :key="i" @click="addClassName(i)">
       <router-link :to="x.url">
-        <div style="width: 35px;height: 35px;margin: 0 auto;padding-bottom: 10px">
+        <div style="width: 35px;height: 35px;margin: 0 auto;padding-bottom: 5px">
           <img v-if="flag != i" :src="x.img">
           <img v-if="flag == i" :src="x.active">
         </div>
@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
     export default {
       name: "footer",
       data() {
@@ -22,7 +22,7 @@
           tabs:[
             {
               title:"外卖",
-              url:'/store',
+              url:'/index',
               img: require('../assets/home.png'),
               active:require('../assets/home_fill.png')
             },
